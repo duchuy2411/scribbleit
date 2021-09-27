@@ -6,13 +6,14 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from '@users/user.module';
 import { AuthModule } from '@auth/auth.module';
 import { BoardModule } from '@/board/board.module';
-import { AuthController } from '@auth/auth.controller';
+import { GatewayModule } from './gateway/gateway.module';
 
 @Module({
   imports: [
     UserModule,
     AuthModule,
     BoardModule,
+    GatewayModule,
     MongooseModule.forRoot('mongodb://localhost:27017/newdb'),
   ],
   controllers: [

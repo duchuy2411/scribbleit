@@ -3,9 +3,14 @@ import { UserService } from './user.service';
 
 import { User } from '../mongo/schema/users';
 
-@Controller()
+@Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
+
+  @Get('all')
+  async getAll() {
+    return await this.userService.getAll();
+  }
 
   @Get()
   findUserById(@Body() body): any {

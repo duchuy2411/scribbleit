@@ -41,4 +41,10 @@ export class UserService {
     const hash = await bcrypt.hash(password, saltOrRounds);
     return this.userModel.create({ ...user, password: hash });
   }
+
+  async getAll() {
+    const users = await this.userModel.find({});
+    console.log("ss", users);
+    return users;
+  }
 }
