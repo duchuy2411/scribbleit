@@ -14,7 +14,7 @@ import { GatewayModule } from './gateway/gateway.module';
     AuthModule,
     BoardModule,
     GatewayModule,
-    MongooseModule.forRoot('mongodb://localhost:27017/newdb'),
+    MongooseModule.forRoot('mongodb://192.168.1.5:27017/newdb'),
   ],
   controllers: [
     AppController,

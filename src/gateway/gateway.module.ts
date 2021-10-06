@@ -1,14 +1,7 @@
 import { Module, NestModule, MiddlewareConsumer } from '@nestjs/common';
-import { EventsGateway } from './gateway';
+import { RedisIoAdapter } from './gateway';
 
 @Module({
-  providers: [EventsGateway],
+  providers: [RedisIoAdapter],           
 })
 export class GatewayModule {};
-// implements NestModule {
-//   configure(consumer: MiddlewareConsumer) {
-//     consumer
-//       .apply(cors())
-//       .forRoutes('')
-//   }
-// };
